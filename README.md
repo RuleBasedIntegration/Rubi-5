@@ -20,9 +20,14 @@ Such a compiler would greatly facilitate the release of *Rubi* 5 with its numero
 
 ### Rubi 5's Functional Prototype
 
-`Rubi-5.m` is *Mathematica* package that implements a functional *Rubi* 5 prototype. It shows the structure of the 42 Int*nnn* functions used to integrate algebraic functions.  Each Int*nnn* function will consist of a *single* deeply-nested if-then-else control construct. It will be compiled, either manually or automatically, from the Rubi 4 pattern matching rules so as to provide the same functionality. 
+The file **Rubi-5.m** is *Mathematica* package that implements a functional *Rubi* 5 prototype. It shows the structure of the 42 Int*nnn* functions used to integrate algebraic functions. Each Int*nnn* function consists of a *single* deeply-nested, if-then-else control construct. Note that these functions do *not* rely on pattern matching making them easy to port of other CAS.
 
-As an example of what needs to be done, currently Int*nnn* functions are fully implemented `Rubi-5.m`. They were manually compiled from the current 
+The Int*nnn* functions need to be compiled, either manually or automatically, from the *Rubi* 4 pattern matching rules so as to provide the same functionality. As an example, the functions Int111 and Int121 have been fully implemented in **Rubi-5.m**. They were manually compiled from the current *development* version of *Rubi* 4 source files **1.1.1 (a+b x)^m.nb** and **1.2.1 (a+b x+c x^2)^p.nb** respectively. (Note these files have slightly different names in the current *distribution* version of *Rubi* 4.)
 
-The remaining 40 are just place holders terminated with a Defer\[Int*nnn*] indicating that 
-if-then-else rules have been compiled from Rubi 4's pattern matching rules.
+The remaining 40 Int*nnn* are terminated with a Defer\[Int*nnn*].  This indicates they are just place holders waiting to be compiled. 
+
+Comparing these *Rubi* 4 source files with the functions Int111 and Int121 makes clear the near one-to-one correspondence between them.
+
+
+I imagine implementing a pattern-matching to if-then-else compiler will be a challenging project. Rather than waiting, perhaps the compilation could be done sooner as a crowd-sourced project with volunteers 
+to be written and debugged. 
