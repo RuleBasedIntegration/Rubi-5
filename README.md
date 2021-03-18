@@ -28,4 +28,4 @@ The remaining 40 Int*nnn* are terminated with a Defer\[Int*nnn*] indicating they
 
 Alternatively, the compilation could be turned into a crowdsourced project with volunteers assigned an Int*nnn* file to manually compile...
 
-Finally to be clear, I keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to honcho the implementation of *Rubi* 5.
+Finally, I'm keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to oversee the implementation of *Rubi* 5.
