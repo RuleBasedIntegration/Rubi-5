@@ -18,7 +18,7 @@ Clearly this compilation should be automated. Conceptually that should be relati
 
 Such a compiler would greatly facilitate the release of *Rubi* 5 with its numerous advantages. It will be relatively easy to port *Rubi* 5 to virtually any CAS supporting an if-then-else control construct. Also preliminary testing indicates selecting rules using an if-then-else tree rather than pattern matching means *Rubi* 5 will run almost 2-orders of magnitude faster than *Rubi* 4.
 
-### The Rubi 5 Project
+### Implementing Rubi 5
 
 The file **Rubi-5.m** is a *Mathematica* package that implements a functional *Rubi* 5 prototype. It shows the structure of the 42 Int*nnn* functions used to integrate algebraic functions. Each Int*nnn* function consists of a *single* deeply-nested, if-then-else control construct. Note that these functions do *not* rely on pattern matching making them easy to port of other CAS.
 
@@ -28,4 +28,4 @@ The remaining 40 Int*nnn* are terminated with a Defer\[Int*nnn*] indicating they
 
 Alternatively, the compilation could be turned into a crowdsourced project with volunteers assigned an Int*nnn* file to manually compile...
 
-Again to be clear, I keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to honcho *the Rubi 5 Project*.
+Again to be clear, I keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to honcho the implementation of *Rubi* 5.
