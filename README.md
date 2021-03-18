@@ -1,5 +1,5 @@
 # Rubi 5
-## A Rule-Based Integrator Built On An If-Then-Else Decision Tree
+## Rule-Based Integrator Built On An If-Then-Else Decision Tree
 ### Albert D. Rich, Applied Logician
 #### 17 March 2021
 
