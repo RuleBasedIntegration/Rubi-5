@@ -21,4 +21,3 @@ Such a compiler would greatly facilitate the release of *Rubi* 5 with its numero
 For more on implementing and porting *Rubi*, see the [Plan for Implementing *Rubi* 5](https://github.com/RuleBasedIntegration/Rubi-5/blob/main/Plan%20for%20Implementing%20Rubi%205.md).
 
 Finally, I'm keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to oversee the implementation of *Rubi* 5.
- 
