@@ -1926,4 +1926,3 @@ ExpandToSum[Fx_,x_Symbol] :=
   If[PolynomialQ[Fx,x],
     Apply[Plus,Map[Function[Simplify[Coefficient[Fx,x,#]]*x^#], Exponent[Fx,x,List]]],
   Expand[Fx,x]]
-
