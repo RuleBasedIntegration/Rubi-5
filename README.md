@@ -1,5 +1,5 @@
 # Rubi 5
-## Rule-Based Integrator Built On An If-Then-Else Decision Tree
+## A Symbolic Integrator Built on a Rule-Based If-Then-Else Decision Tree
 ### Albert D. Rich, Applied Logician
 #### 17 March 2021
 
@@ -17,5 +17,7 @@ Once this is accomplished, I can begin work in earnest on *Rubi* 5. That involve
 Clearly this compilation should be automated. Conceptually that should be relatively fairly straight-forward to do, given the hierarchical nature of the decision tree implicit in *Rubi* 4's pattern matching rules.
 
 Such a compiler would greatly facilitate the release of *Rubi* 5 with its numerous advantages. It will be relatively easy to port *Rubi* 5 to virtually any CAS supporting an if-then-else control construct. Also preliminary testing indicates selecting rules using an if-then-else tree rather than pattern matching means *Rubi* 5 will run almost 2-orders of magnitude faster than *Rubi* 4.
+
+For more on implementing and porting *Rubi*, see the [Plan for Implementing *Rubi* 5](https://github.com/RuleBasedIntegration/Rubi-5/blob/main/Plan%20for%20Implementing%20Rubi%205.md).
 
 Finally, I'm keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to oversee the implementation of *Rubi* 5.
