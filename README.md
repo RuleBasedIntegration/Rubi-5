@@ -28,10 +28,10 @@ Comparing the 2 *Rubi* 4 source files with the functions Int111 and Int121 makes
 
 Once all 42 Int*nnn* functions have been properly defined, the number of *Rubi* 4’s over 3000 algebraic function pattern matching rules for Int[u, x] will have been reduced to *Rubi* 5’s just 42 pattern matching rules. Porting *Rubi* 5 to a host CAS that provides even minimal pattern matching abilities should be capable of handling just 42 rules for Int[u, x].
 
-Porting *Rubi* 5 to a CAS that does *not* support pattern matching, will require the implementors define an Int[u, x] function that categorizes the arbitrary expression u and then calls the Int*nnn* function that services such expressions along with the appropriate arguments. Otherwise Int[u, x] should return the integral unevaluated.
+Porting *Rubi* 5 to a CAS that does *not* support pattern matching will require the implementors define an Int[u, x] function that categorizes the arbitrary expression u and then calls the Int*nnn* function that services such expressions along with the appropriate arguments. Otherwise Int[u, x] should return the integral unevaluated.
 
 That arbitrary expression categorization can be implemented using an if-then-else decision tree (of which I'm obviously a big fan) to define Int[u, x] as follows:
-* Define a utility routine that returns an expression's type number: linear(1), quadratic(2), cubic(3), quartic(4), binomial(5), trinomial(6) and unknown(7).
+* Define a utility routine that returns an expression's type number: 1=linear, 2=quadratic, 3=cubic, 4=quartic, 5=binomial, 6=trinomial and 7=unknown.
 * For Int[c f(x), x] where c is free of x, return c Int[f(x), x].
 * For Int[f(x)+g(x), x], return Int[f(x), x] + Int[g(x), x].
 * For Int[f(x)^m, x] where m is free of x, call the appropriate Int*nnn* function based on the type of f(x).
