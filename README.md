@@ -28,13 +28,15 @@ Comparing the 2 *Rubi* 4 source files with the functions Int111 and Int121 makes
 
 Once all 42 Int*nnn* functions have been properly defined, the number of *Rubi* 4’s over 3000 algebraic function pattern matching rules for Int[u, x] will have been reduced to *Rubi* 5’s just 42 pattern matching rules. Porting *Rubi* 5 to a host CAS that provides even minimal pattern matching abilities should be capable of handling just 42 rules for Int[u, x].
 
-Porting *Rubi* 5 to a CAS that does *not* support pattern matching, will require the implementors define an Int[u, x] function that categorizes the arbitrary expression u and calls the Int*nnn* function that services such expressions along with the appropriate arguments. Otherwise Int[u, x] should return the integral unevaluated.
+Porting *Rubi* 5 to a CAS that does *not* support pattern matching, will require the implementors define an Int[u, x] function that categorizes the arbitrary expression u and then calls the Int*nnn* function that services such expressions along with the appropriate arguments. Otherwise Int[u, x] should return the integral unevaluated.
 
 That arbitrary expression categorization can be implemented using an if-then-else decision tree (of which I'm obviously a big fan) to define Int[u, x] as follows:
 * Define a utility routine that returns an expression's type number: linear(1), quadratic(2), cubic(3), quartic(4), binomial(5), trinomial(6) and unknown(7).
 * For Int[c f(x), x] where c is free of x, return c Int[f(x), x].
 * For Int[f(x)+g(x), x], return Int[f(x), x] + Int[g(x), x].
 * For Int[f(x)^m, x] where m is free of x, call the appropriate Int*nnn* function based on the type of f(x).
-* For Int[f(x)^m g(x)^n ...] where m, n, ... are free of x, sort the list of base/degree pairs {{f(x),m}, {g(x),n}, ...} based on the type of the bases. Then descend through a 42-leaf if-then-else decision tree based on the type of successive elements of the list and call the Int*nnn* function named at the leaf.
+* For Int[f(x)^m g(x)^n ...] where m, n, ... are free of x, sort the list of base/degree pairs {{f(x),m}, {g(x),n}, ...} based on the type number of the bases. Then descend through a 42-leaf if-then-else decision tree based on the type of successive elements of the list and call the Int*nnn* function named at the leaf.
+
+A disclaimer: The above description how to implement *Rubi* 5 glosses over numerous issues involved in compiling the 42 Int*nnn* functions and Int[u, x] itself into if-then-else decision trees.
 
 Finally, I'm keeping my focus squarely on perfecting *Rubi* 4 to my satisfaction *before* turning my attention to *Rubi* 5. So I invite others having the interest and expertise required to oversee the implementation of *Rubi* 5.
