@@ -1,7 +1,7 @@
 # Rubi 5
 ## A Symbolic Integrator Built on a Rule-Based If-Then-Else Decision Tree
 ### Albert D. Rich, Applied Logician
-#### 17 March 2021
+#### 18 March 2021
 
 It's been over two years since *Rubi* 4.16.1 was released. Although far from perfect, it is based on a fairly powerful, stable system of rules. The integration rules and associated test-suite on [*Rubi*'s website](https://rulebasedintegration.org/) are the most up-to-date, publicly available versions.
 
