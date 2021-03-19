@@ -15,5 +15,5 @@ That arbitrary expression categorization can be implemented using an if-then-els
 * For Int[f(x)+g(x), x], return Int[f(x), x] + Int[g(x), x].
 * For Int[f(x)^m, x] where m is free of x, call the appropriate Int*nnn* function based on the type of f(x).
 * For Int[f(x)^m g(x)^n ...] where m, n, ... are free of x, sort the list of base/degree pairs {{f(x),m}, {g(x),n}, ...} based on the type number of the bases. Then descend through a 42-leaf if-then-else decision tree based on the type of successive elements of the list and call the Int*nnn* function named at the leaf.
-* 
+ 
 A disclaimer: The above description how to implement *Rubi* 5 glosses over numerous issues involved in compiling the 42 Int*nnn* functions and Int[u, x] itself into if-then-else decision trees.
